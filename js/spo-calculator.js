@@ -10,7 +10,8 @@ const SPO_PRODUCTS = {
     baseCost: 395,
     unitName: '10kg Bag',
     unitsPerPack: { unit: 1, pack: 4, box: 10, carton: 25, case: 50 },
-    gstRate: 0.05
+    gstRate: 0.05,
+    image: 'assets/images/product_atta.jpg'
   },
   oil: {
     name: 'Fortune Sunlite Sunflower Oil 1L',
@@ -19,7 +20,8 @@ const SPO_PRODUCTS = {
     baseCost: 145,
     unitName: '1L Pouch',
     unitsPerPack: { unit: 1, pack: 6, box: 12, carton: 24, case: 48 },
-    gstRate: 0.05
+    gstRate: 0.05,
+    image: 'assets/images/product_oil.jpg'
   },
   chips: {
     name: "Lay's Classic Salted Party Pack",
@@ -28,7 +30,8 @@ const SPO_PRODUCTS = {
     baseCost: 42,
     unitName: '115g Pack',
     unitsPerPack: { unit: 1, pack: 12, box: 24, carton: 48, case: 96 },
-    gstRate: 0.12
+    gstRate: 0.12,
+    image: 'assets/images/product_chips.jpg'
   },
   soap: {
     name: 'Medimix Ayurvedic Soap 125g (4-Pack)',
@@ -37,7 +40,8 @@ const SPO_PRODUCTS = {
     baseCost: 152,
     unitName: '4-Bar Box',
     unitsPerPack: { unit: 1, pack: 6, box: 12, carton: 36, case: 72 },
-    gstRate: 0.18
+    gstRate: 0.18,
+    image: 'assets/images/product_soap.jpg'
   },
   drink: {
     name: 'Red Bull Energy Drink 250ml',
@@ -46,7 +50,8 @@ const SPO_PRODUCTS = {
     baseCost: 108,
     unitName: '250ml Can',
     unitsPerPack: { unit: 1, pack: 4, box: 12, carton: 24, case: 48 },
-    gstRate: 0.28
+    gstRate: 0.28,
+    image: 'assets/images/product_drink.jpg'
   },
   tea: {
     name: 'Tata Tea Gold Premium 500g',
@@ -55,7 +60,8 @@ const SPO_PRODUCTS = {
     baseCost: 280,
     unitName: '500g Pouch',
     unitsPerPack: { unit: 1, pack: 4, box: 12, carton: 24, case: 48 },
-    gstRate: 0.05
+    gstRate: 0.05,
+    image: 'assets/images/product_tea.jpg'
   }
 };
 
@@ -142,6 +148,7 @@ function updateSPOCalculations() {
   const elMarginPercent = document.getElementById('calc-margin-percent');
   const elMarginBar = document.getElementById('calc-margin-bar');
   const elTierBadge = document.getElementById('calc-tier-badge');
+  const elProductImg = document.getElementById('calc-product-img');
 
   if (elTitle) elTitle.textContent = product.name;
   if (elCategory) elCategory.textContent = product.category;
@@ -153,6 +160,7 @@ function updateSPOCalculations() {
   if (elMarginPercent) elMarginPercent.textContent = `${retailerMarginPercent}% Margin`;
   if (elMarginBar) elMarginBar.style.width = `${Math.min(retailerMarginPercent * 3.5, 100)}%`;
   if (elTierBadge) elTierBadge.textContent = `${currentTier.toUpperCase()} TIER (${Math.round(totalDiscountRate * 100)}% OFF)`;
+  if (elProductImg && product.image) elProductImg.src = product.image;
 }
 
 document.addEventListener('DOMContentLoaded', initSPOCalculator);

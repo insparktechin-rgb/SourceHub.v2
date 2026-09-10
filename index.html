@@ -47,22 +47,17 @@
       </a>
 
       <nav class="nav-menu" id="nav-menu-links">
-        <a href="#platform" class="nav-link" id="link-platform">Ecosystem</a>
+        <a href="#platform" class="nav-link" id="link-platform">Platform</a>
         <a href="#problem-solution" class="nav-link" id="link-solution">Why SourceHub</a>
-        <a href="#spo-pricing" class="nav-link" id="link-pricing">SPO Pricing Engine</a>
-        <a href="#store-formats" class="nav-link" id="link-formats">Two Ways to Source</a>
-        <a href="#dashboards" class="nav-link" id="link-dashboards">Role Portals</a>
-        <a href="#ev-logistics" class="nav-link" id="link-ev">100% EV Fleet</a>
-        <a href="#expansion" class="nav-link" id="link-expansion">Network Hubs</a>
+        <a href="#spo-pricing" class="nav-link" id="link-pricing">SPO Pricing</a>
+        <a href="#store-formats" class="nav-link" id="link-formats">How It Works</a>
+        <a href="#ev-logistics" class="nav-link" id="link-ev">EV Logistics</a>
+        <a href="#expansion" class="nav-link" id="link-expansion">Network</a>
       </nav>
 
       <div class="nav-actions">
         <button class="btn btn-primary btn-sm" data-modal-target="partner-modal" id="nav-btn-partner">
-          <span>Join as Partner</span>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
+          <span>Become a Retail Partner &rarr;</span>
         </button>
         <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -76,113 +71,105 @@
   </header>
 
   <!-- =========================================================================
-       2. HERO SECTION (CLEAN BRIGHT LIGHT CANVAS)
+       2. HERO SECTION (PREMIUM B2B LIGHT THEME)
        ========================================================================= -->
-  <section class="hero-section parallax-section" id="hero">
-    <!-- Dynamic Background Video with Reference Gradient Scrim -->
-    <div class="hero-bg-wrapper">
-      <video class="hero-bg-video desktop-video" autoplay muted loop playsinline id="hero-bg-video-desktop">
-        <source src="assets/videos/hero_background.mp4" type="video/mp4">
-      </video>
-      <video class="hero-bg-video mobile-video" autoplay muted loop playsinline id="hero-bg-video-mobile">
-        <source src="assets/videos/Mobile_hero-section.mp4" type="video/mp4">
-      </video>
-      <div class="hero-bg-overlay"></div>
-    </div>
-
-    <!-- Parallax Ambient Canvas -->
-    <div class="parallax-canvas">
-      <div class="parallax-orb parallax-orb-teal-1" data-parallax-speed="0.25"></div>
-    </div>
-
-    <div class="container container-wide hero-main-container">
-      <!-- Top Row: Content on Left -->
-      <div class="hero-top-row">
-        <div class="hero-content-left">
-          <h1 class="hero-heading">
-            Connecting Brands,<br>
-            Warehouses,Stores &amp; <span class="hero-heading-retailers">Retailers</span>
+  <section class="hero-section" id="hero">
+    <div class="container container-wide">
+      <div class="hero-grid">
+        <!-- Left Column: Content -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-text">INDIA’S SMART OMNICHANNEL RETAIL SUPPLY PLATFORM</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Everything your store needs.<br>
+            <span class="text-teal">One connected supply network.</span>
           </h1>
-
-          <p class="hero-description">
-            Delivering smarter, faster and greener retail distribution through cutting edge sales force automation, AI
-            demand forecasting, multi-city warehouses, and 100% EV logistics.
+          
+          <p class="hero-subtitle">
+            SourceHub connects brands, warehouses, stores and retailers on one intelligent supply platform — with live inventory, smart pricing, omnichannel ordering and fast EV-powered fulfillment.
           </p>
-
-          <div class="hero-cta-buttons">
-            <button class="btn btn-primary" data-modal-target="partner-modal" id="hero-cta-partner">
-              <span>Become a Retail Partner</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
+          
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-modal-target="partner-modal">
+              <span>Become a Retail Partner &rarr;</span>
             </button>
-
-            <button class="btn btn-secondary" data-modal-target="app-download-modal" id="hero-cta-download">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
-              <span>Explore the Platform</span>
+            <button class="btn btn-outline" data-modal-target="app-download-modal">
+              <span>Explore the Platform &rarr;</span>
             </button>
+          </div>
+          
+          <div class="hero-channels">
+            App &bull; Web &bull; WhatsApp &bull; Walk-in &bull; Pickup
+          </div>
+        </div>
+
+        <!-- Right Column: Visual -->
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero_ecosystem.jpg" alt="SourceHub Retail Ecosystem" class="hero-ecosystem-img">
+            <!-- Subtle floating labels -->
+            <div class="floating-label label-1">Live Inventory</div>
+            <div class="floating-label label-2">EV Fulfillment</div>
+            <div class="floating-label label-3">Smart Pricing</div>
+            <div class="floating-label label-4">Connected Network</div>
           </div>
         </div>
       </div>
 
-      <!-- Bottom Full-Width Elevated Dark Glass Metrics Bar -->
-      <div class="hero-glass-stats-bar">
-        <div class="stat-metric-cell">
-          <div class="stat-metric-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      <!-- Bottom Trust Strip -->
+      <div class="hero-trust-strip">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
             </svg>
           </div>
-          <div class="stat-metric-info">
-            <h3>2.4 Hrs</h3>
-            <p>Avg Delivery Speed</p>
+          <div class="trust-text">
+            <strong>Live Inventory</strong>
+            <span>Real-time stock visibility</span>
           </div>
         </div>
-
-        <div class="stat-metric-cell">
-          <div class="stat-metric-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
             </svg>
           </div>
-          <div class="stat-metric-info">
-            <h3>100% EV</h3>
-            <p>Green Zero-Emission Fleet</p>
+          <div class="trust-text">
+            <strong>Smart SPO Pricing</strong>
+            <span>Partner-based pricing</span>
           </div>
         </div>
-
-        <div class="stat-metric-cell">
-          <div class="stat-metric-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <rect x="1" y="3" width="15" height="13"></rect>
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-              <circle cx="5.5" cy="18.5" r="2.5"></circle>
-              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+        
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1h2"></path>
+              <circle cx="7" cy="17" r="2"></circle>
+              <circle cx="17" cy="17" r="2"></circle>
             </svg>
           </div>
-          <div class="stat-metric-info">
-            <h3>₹0 Fee</h3>
-            <p>Free Delivery &gt; ₹3,000</p>
+          <div class="trust-text">
+            <strong>Same-Day EV Fulfillment</strong>
+            <span>Free above ₹3,000</span>
           </div>
         </div>
-
-        <div class="stat-metric-cell">
-          <div class="stat-metric-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-              </path>
+        
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </div>
-          <div class="stat-metric-info">
-            <h3>7 Cities</h3>
-            <p>Network Hubs Live</p>
+          <div class="trust-text">
+            <strong>Connected Network</strong>
+            <span>Stores + warehouses + retailers</span>
           </div>
         </div>
       </div>
@@ -200,34 +187,63 @@
     </div>
 
     <div class="container">
-      <div style="text-align: center; max-width: 780px; margin: 0 auto 52px;">
+      <div style="text-align: center; max-width: 820px; margin: 0 auto 40px;">
         <span class="badge badge-teal" style="margin-bottom: 14px;">Platform Architecture</span>
-        <h2 style="font-size: 2.4rem; margin-bottom: 14px;">More Than E-Commerce &mdash; India's Unified Distribution
-          Ecosystem</h2>
-        <p style="color: var(--text-secondary); font-size: 1.05rem;">A synchronized sales automation &amp; supply cloud
-          uniting FMCG manufacturers, bulk wholesale depots, walk-in retail stores, and neighborhood kiranas.</p>
+        <h2 style="font-size: 2.4rem; margin-bottom: 14px;">More Than E-Commerce &mdash; India's Unified Distribution Ecosystem</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">One connected platform for sourcing, inventory, pricing and fulfillment &mdash; bringing brands, warehouses, stores and retailers into a single supply network.</p>
+      </div>
+
+      <!-- Ecosystem Flowchart -->
+      <div class="ecosystem-flow-container">
+        <div class="flow-node">Brands</div>
+        <div class="flow-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+        
+        <div class="flow-node platform-node">
+          <div class="platform-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="platform-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            SourceHub Platform
+          </div>
+          <div class="platform-tags">
+            <span>Live Inventory</span>
+            <span>Smart Pricing</span>
+            <span>Omnichannel Orders</span>
+            <span>AI Inventory</span>
+          </div>
+        </div>
+
+        <div class="flow-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+        <div class="flow-node">Warehouses<br>+ Stores</div>
+        
+        <div class="flow-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+        <div class="flow-node">Retailers</div>
+        
+        <div class="flow-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+        <div class="flow-node">EV Fulfillment</div>
       </div>
 
       <div class="identity-grid">
         <!-- Card 1 -->
         <div class="identity-card interactive-card-3d">
           <div class="identity-card-header">
-            <div class="stat-metric-icon" style="width: 44px; height: 44px;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
+            <div class="stat-metric-icon" style="width: 40px; height: 40px;">
+              <span style="font-size: 1.1rem; font-weight: 700; color: var(--brand-teal-dark); font-family: 'JetBrains Mono', monospace;">01</span>
             </div>
             <span class="badge badge-teal">Unified</span>
           </div>
+
           <h3>Omnichannel Commerce</h3>
-          <p>Seamless buying and inventory management across Retail Mobile App, Web Portal, Walk-in Stores, and instant
-            WhatsApp 1-tap reordering.</p>
+          <p>Seamless buying and inventory management across App, Web, Walk-in and WhatsApp.</p>
           <div class="identity-card-footer">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--brand-teal);">
+              <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             <span>Single Account Sync</span>
           </div>
@@ -236,20 +252,15 @@
         <!-- Card 2 -->
         <div class="identity-card interactive-card-3d">
           <div class="identity-card-header">
-            <div class="stat-metric-icon" style="width: 44px; height: 44px;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                </path>
-              </svg>
+            <div class="stat-metric-icon" style="width: 40px; height: 40px;">
+              <span style="font-size: 1.1rem; font-weight: 700; color: var(--brand-teal-dark); font-family: 'JetBrains Mono', monospace;">02</span>
             </div>
             <span class="badge badge-teal">Real-Time</span>
           </div>
           <h3>Live Warehouse Network</h3>
-          <p>Multi-city high-tech warehouses with real-time inventory tracking, barcode conveyor scanning, and automated
-            dispatch management.</p>
+          <p>Multi-city high-tech warehouses with real-time inventory tracking, barcode scanning, and automated dispatch.</p>
           <div class="identity-card-footer">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--brand-teal);">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             <span>Zero Phantom Stock</span>
@@ -259,43 +270,36 @@
         <!-- Card 3 -->
         <div class="identity-card interactive-card-3d">
           <div class="identity-card-header">
-            <div class="stat-metric-icon" style="width: 44px; height: 44px;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 6v6l4 2"></path>
-              </svg>
+            <div class="stat-metric-icon" style="width: 40px; height: 40px;">
+              <span style="font-size: 1.1rem; font-weight: 700; color: var(--brand-teal-dark); font-family: 'JetBrains Mono', monospace;">03</span>
             </div>
             <span class="badge badge-teal">AI-Powered</span>
           </div>
           <h3>AI-Driven Inventory</h3>
-          <p>Automated demand forecasting, SKU replenishment alerts, festival surge prediction, and algorithmic stock
-            recommendations tailored to local demographics.</p>
+          <p>Automated demand forecasting, SKU replenishment alerts, and algorithmic stock recommendations tailored to local demographics.</p>
           <div class="identity-card-footer">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--brand-teal);">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
-            <span>Predictive Auto-Fill</span>
+            <span>Prevent Stockouts</span>
           </div>
         </div>
 
         <!-- Card 4 -->
         <div class="identity-card interactive-card-3d">
           <div class="identity-card-header">
-            <div class="stat-metric-icon" style="width: 44px; height: 44px;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-              </svg>
+            <div class="stat-metric-icon" style="width: 40px; height: 40px;">
+              <span style="font-size: 1.1rem; font-weight: 700; color: var(--brand-teal-dark); font-family: 'JetBrains Mono', monospace;">04</span>
             </div>
-            <span class="badge badge-teal">100% Green</span>
+            <span class="badge badge-teal">Sustainable</span>
           </div>
           <h3>Eco-Friendly EV Delivery</h3>
-          <p>100% electric cargo scooter and e-van fleet providing free same-day delivery on orders above ₹3,000,
-            slashing both carbon footprint and retail supply costs.</p>
+          <p>100% electric commercial 3-wheeler fleet ensuring fast, zero-emission logistics for wholesale and retail drops.</p>
           <div class="identity-card-footer">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--brand-teal);">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
-            <span>Zero Delivery Surcharge</span>
+            <span>Zero Emissions</span>
           </div>
         </div>
       </div>
@@ -833,7 +837,7 @@
           </div>
 
           <div class="product-display-hero">
-            <img src="assets/images/fmcg_products_bundle.jpg" alt="FMCG Product" id="calc-product-img">
+            <img src="assets/images/product_atta.jpg" alt="FMCG Product" id="calc-product-img">
             <div>
               <h3 id="calc-product-title" style="color: var(--text-primary); font-size: 1.25rem;">Aashirvaad Chakki Atta
                 10kg</h3>

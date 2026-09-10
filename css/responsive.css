@@ -227,27 +227,35 @@ html, body {
     padding-bottom: 48px;
   }
 
-  .hero-top-row {
+  .hero-grid {
     grid-template-columns: 1fr;
     gap: 36px;
     margin-bottom: 36px;
+    text-align: center;
   }
 
-  .hero-showcase-right,
-  .hero-live-card {
-    max-width: 100%;
+  .hero-actions {
+    justify-content: center;
   }
 
-  .hero-content-left {
-    max-width: 100%;
-  }
-
-  .hero-glass-stats-bar {
+  .hero-trust-strip {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 24px;
+    padding-top: 24px;
+    margin-top: 40px;
   }
 
+  /* Platform Architecture */
+  .ecosystem-flow-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .flow-arrow svg {
+    transform: rotate(0deg);
+  }
+  
   /* Comparison Section */
   .comparison-container {
     grid-template-columns: 1fr;
@@ -752,51 +760,51 @@ html, body {
     padding-bottom: 32px;
   }
 
-  .hero-tag-smarter {
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-    gap: 6px;
-    margin-bottom: 14px;
+  .hero-eyebrow .eyebrow-text {
+    font-size: 0.7rem;
+    padding: 6px 12px;
   }
 
-  .hero-heading {
+  .hero-title {
     font-size: 2.1rem;
     line-height: 1.15;
     margin-bottom: 16px;
   }
 
-  .hero-description {
+  .hero-subtitle {
     font-size: 0.95rem;
     line-height: 1.55;
     margin-bottom: 24px;
   }
 
-  .hero-cta-buttons {
+  .hero-actions {
     flex-direction: column;
     width: 100%;
     gap: 12px;
   }
 
-  .hero-cta-buttons .btn {
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline {
     width: 100%;
-    min-height: 48px;
     justify-content: center;
   }
-
-  .hero-social-proof {
-    flex-wrap: wrap;
-    gap: 10px;
+  
+  .hero-channels {
+    font-size: 0.75rem;
   }
 
-  .proof-text {
-    font-size: 0.82rem;
+  .floating-label {
+    font-size: 0.6rem;
+    padding: 4px 8px;
   }
 
   /* Bottom Stats Bar on Small Mobile */
-  .hero-glass-stats-bar {
+  .hero-trust-strip {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 18px 16px;
+    padding-top: 24px;
+    margin-top: 32px;
   }
 
   .stat-metric-cell {
