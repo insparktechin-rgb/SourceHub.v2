@@ -7,28 +7,28 @@ const HUB_DATA = {
     name: 'Bengaluru Central Mega Hub',
     state: 'Karnataka (HQ)',
     status: 'Operational • 24/7 Active',
-    warehouses: '3 Mega Warehouses + 18 Micro Stores',
-    warehouseSqFt: '250,000+ sq.ft.',
+    Horeca: '3 Mega Horeca + 18 Micro Stores',
+    HorecaqFt: '250,000+ sq.ft.',
     evFleet: '140+ EV Scooters & Vans',
-    avgDeliveryTime: '2.2 Hours',
+    avgDeliveryTime: '4-6 Hours',
     coverage: '100% Greater Bengaluru & Outer Tech Corridors'
   },
   mysuru: {
     name: 'Mysuru Regional Distribution Hub',
     state: 'South Karnataka',
     status: 'Operational • Live',
-    warehouses: '1 Regional Warehouse + 6 Micro Stores',
-    warehouseSqFt: '65,000 sq.ft.',
+    Horeca: '1 Regional Warehouse + 6 Micro Stores',
+    HorecaqFt: '65,000 sq.ft.',
     evFleet: '42 EV Scooters',
-    avgDeliveryTime: '2.4 Hours',
+    avgDeliveryTime: '4-6 Hours',
     coverage: 'Mysuru Urban, Nanjangud, Mandya, Srirangapatna'
   },
   mangaluru: {
     name: 'Mangaluru Coastal Supply Hub',
     state: 'Coastal Karnataka',
     status: 'Operational • Live',
-    warehouses: '1 Coastal Warehouse + 4 Express Points',
-    warehouseSqFt: '48,000 sq.ft.',
+    Horeca: '1 Coastal Warehouse + 4 Express Points',
+    HorecaqFt: '48,000 sq.ft.',
     evFleet: '35 EV Cargo Units',
     avgDeliveryTime: '2.6 Hours',
     coverage: 'Mangaluru City, Udupi, Surathkal, Bantwal'
@@ -37,8 +37,8 @@ const HUB_DATA = {
     name: 'Hubballi-Dharwad North Hub',
     state: 'North Karnataka',
     status: 'Operational • Live',
-    warehouses: '1 North Gateway Warehouse + 5 Stores',
-    warehouseSqFt: '75,000 sq.ft.',
+    Horeca: '1 North Gateway Warehouse + 5 Stores',
+    HorecaqFt: '75,000 sq.ft.',
     evFleet: '50 EV Scooters',
     avgDeliveryTime: '2.3 Hours',
     coverage: 'Hubballi, Dharwad, Gadag, Haveri'
@@ -47,8 +47,8 @@ const HUB_DATA = {
     name: 'Shivamogga Malnad Depot',
     state: 'Central Karnataka',
     status: 'Operational • Live',
-    warehouses: '1 Malnad Depot + 3 Micro Hubs',
-    warehouseSqFt: '38,000 sq.ft.',
+    Horeca: '1 Malnad Depot + 3 Micro Hubs',
+    HorecaqFt: '38,000 sq.ft.',
     evFleet: '24 EV Cargo Units',
     avgDeliveryTime: '2.8 Hours',
     coverage: 'Shivamogga, Bhadravati, Sagar'
@@ -57,8 +57,8 @@ const HUB_DATA = {
     name: 'Belagavi Industrial Corridor Hub',
     state: 'North Karnataka',
     status: 'Operational • Live',
-    warehouses: '1 Regional Depot + 4 Stores',
-    warehouseSqFt: '52,000 sq.ft.',
+    Horeca: '1 Regional Depot + 4 Stores',
+    HorecaqFt: '52,000 sq.ft.',
     evFleet: '38 EV Cargo Units',
     avgDeliveryTime: '2.5 Hours',
     coverage: 'Belagavi, Gokak, Chikodi, Khanapur'
@@ -67,8 +67,8 @@ const HUB_DATA = {
     name: 'Tumakuru Smart Industrial Node',
     state: 'Central Karnataka',
     status: 'Operational • Live',
-    warehouses: '1 Express Fulfillment Center',
-    warehouseSqFt: '40,000 sq.ft.',
+    Horeca: '1 Express Fulfillment Center',
+    HorecaqFt: '40,000 sq.ft.',
     evFleet: '30 EV Cargo Units',
     avgDeliveryTime: '2.1 Hours',
     coverage: 'Tumakuru Smart City, Vasanthanarasapura, Sira'
@@ -79,7 +79,7 @@ function initExpansionMap() {
   const pins = document.querySelectorAll('.city-hub-pin');
   const hubCityName = document.getElementById('hub-city-title');
   const hubStatusBadge = document.getElementById('hub-status-badge');
-  const hubWarehouses = document.getElementById('hub-warehouse-count');
+  const hubHoreca = document.getElementById('hub-warehouse-count');
   const hubArea = document.getElementById('hub-area-size');
   const hubFleet = document.getElementById('hub-fleet-size');
   const hubDeliveryTime = document.getElementById('hub-delivery-time');
@@ -96,8 +96,8 @@ function initExpansionMap() {
 
       if (hubCityName) hubCityName.textContent = data.name;
       if (hubStatusBadge) hubStatusBadge.textContent = data.status;
-      if (hubWarehouses) hubWarehouses.textContent = data.warehouses;
-      if (hubArea) hubArea.textContent = data.warehouseSqFt;
+      if (hubHoreca) hubHoreca.textContent = data.Horeca;
+      if (hubArea) hubArea.textContent = data.HorecaqFt;
       if (hubFleet) hubFleet.textContent = data.evFleet;
       if (hubDeliveryTime) hubDeliveryTime.textContent = data.avgDeliveryTime;
       if (hubCoverageText) hubCoverageText.textContent = data.coverage;

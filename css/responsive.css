@@ -223,27 +223,43 @@ html, body {
   /* Hero Section */
   .hero-section {
     min-height: auto;
-    padding-top: calc(var(--header-height) + 32px);
-    padding-bottom: 48px;
+    padding-top: calc(var(--header-height) + 16px);
+    padding-bottom: 40px;
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    margin-bottom: 36px;
-    text-align: center;
+  .hero-visual-center {
+    width: min(94%, 720px);
+    margin-bottom: 24px;
+  }
+
+  .hero-image-wrapper {
+    height: auto;
+    aspect-ratio: 2752 / 1536;
+    max-height: 400px;
+    border-radius: 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 3.2vw, 2.6rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 540px;
+    margin-bottom: 22px;
   }
 
   .hero-actions {
     justify-content: center;
+    margin-bottom: 36px;
   }
 
   .hero-trust-strip {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding-top: 24px;
-    margin-top: 40px;
+    padding-top: 28px;
+    margin-top: 0;
   }
 
   /* Platform Architecture */
@@ -756,31 +772,41 @@ html, body {
 
   /* Hero Section Mobile */
   .hero-section {
-    padding-top: calc(var(--header-height) + 24px);
+    padding-top: calc(var(--header-height) + 16px);
     padding-bottom: 32px;
   }
 
-  .hero-eyebrow .eyebrow-text {
-    font-size: 0.7rem;
-    padding: 6px 12px;
+  .hero-visual-center {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-image-wrapper {
+    height: clamp(200px, 50vw, 260px);
+    border-radius: 14px;
+  }
+
+  .hero-ecosystem-img {
+    border-radius: 14px;
   }
 
   .hero-title {
-    font-size: 2.1rem;
-    line-height: 1.15;
-    margin-bottom: 16px;
+    font-size: 1.85rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.55;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .hero-actions {
     flex-direction: column;
     width: 100%;
     gap: 12px;
+    margin-bottom: 30px;
   }
 
   .hero-actions .btn-primary,
@@ -788,23 +814,14 @@ html, body {
     width: 100%;
     justify-content: center;
   }
-  
-  .hero-channels {
-    font-size: 0.75rem;
-  }
 
-  .floating-label {
-    font-size: 0.6rem;
-    padding: 4px 8px;
-  }
-
-  /* Bottom Stats Bar on Small Mobile */
+  /* Bottom Benefit Strip on Small Mobile */
   .hero-trust-strip {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    padding-top: 24px;
-    margin-top: 32px;
+    padding-top: 20px;
+    margin-top: 0;
   }
 
   .stat-metric-cell {
@@ -1227,6 +1244,41 @@ html, body {
 
   .cta-banner-card .btn {
     width: 100%;
+  }
+
+  /* WhatsApp CTA Section Mobile */
+  .whatsapp-cta-section {
+    padding: 20px 0 40px;
+  }
+
+  .whatsapp-cta-banner {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .whatsapp-cta-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whatsapp-cta-right {
+    align-items: center;
+    width: 100%;
+  }
+
+  .whatsapp-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .floating-whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
   }
 
   /* Footer */

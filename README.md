@@ -1,7 +1,7 @@
 # SourceHub (SourceHub.in) 🚀
 ### Modern B2B Omnichannel Retail Supply & Distribution Platform
 
-SourceHub is a modern B2B retail distribution platform connecting FMCG brands, multi-city automated warehouses, walk-in cash-and-carry stores, and kirana retailers with AI demand forecasting, dynamic SPO pricing, and 100% EV-powered logistics.
+SourceHub is a modern B2B retail distribution platform connecting FMCG brands, multi-city automated Horeca, walk-in cash-and-carry stores, and kirana retailers with AI demand forecasting, dynamic SPO pricing, and 100% EV-powered logistics.
 
 ---
 
