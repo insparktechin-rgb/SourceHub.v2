@@ -1781,14 +1781,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.map-svg-container svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .city-hub-pin {
   position: absolute;
   cursor: pointer;
   transform: translate(-50%, -50%);
-  transition: all var(--transition-normal);
+  transition: transform 0.25s ease, z-index 0.25s ease;
   z-index: 5;
+}
+
+.city-hub-pin:hover {
+  z-index: 10;
 }
 
 .pin-circle {
@@ -1797,18 +1809,49 @@
   border-radius: 50%;
   background: var(--brand-teal);
   box-shadow: 0 0 12px rgba(0, 166, 140, 0.4);
-  border: 2px solid #FFFFFF;
+  border: 2.5px solid #FFFFFF;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.city-hub-pin:hover .pin-circle {
+  transform: scale(1.2);
+  box-shadow: 0 0 16px rgba(0, 166, 140, 0.6);
+}
+
+.city-hub-pin.active {
+  z-index: 15;
 }
 
 .city-hub-pin.active .pin-circle {
   background: #00C49F;
-  box-shadow: 0 0 20px rgba(0, 166, 140, 0.7);
-  transform: scale(1.3);
+  box-shadow: 0 0 20px rgba(0, 166, 140, 0.8);
+  transform: scale(1.35);
+}
+
+.city-hub-pin.active .pin-circle::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 166, 140, 0.7);
+  animation: hubPinPulse 2s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes hubPinPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
 }
 
 .pin-label {
   position: absolute;
-  top: -24px;
+  top: -26px;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
@@ -1820,6 +1863,22 @@
   border-radius: var(--radius-full);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-xs);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.city-hub-pin:hover .pin-label {
+  border-color: rgba(0, 166, 140, 0.4);
+  box-shadow: var(--shadow-sm);
+}
+
+.city-hub-pin.active .pin-label {
+  background: #FFFFFF;
+  border-color: var(--brand-teal);
+  color: var(--brand-teal);
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 166, 140, 0.18);
+  transform: translateX(-50%) scale(1.05);
 }
 
 .hub-details-card {

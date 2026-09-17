@@ -1651,50 +1651,167 @@
         <!-- Interactive Map Pins Card -->
         <div class="interactive-map-card interactive-card-3d">
           <div class="map-svg-container">
-            <!-- Stylized Karnataka Map SVG Background -->
-            <svg width="340" height="400" viewBox="0 0 340 400" fill="none" style="opacity: 0.95;">
+            <!-- Realistic Bengaluru Logistics Map SVG Background -->
+            <svg width="100%" height="100%" viewBox="0 0 540 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-height: 420px; overflow: visible;">
+              <defs>
+                <!-- Background Grid -->
+                <pattern id="blr-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+                  <path d="M 28 0 L 0 0 0 28" fill="none" stroke="rgba(0, 166, 140, 0.06)" stroke-width="0.8" />
+                  <circle cx="0" cy="0" r="0.9" fill="rgba(0, 166, 140, 0.2)" />
+                </pattern>
+                <!-- Subtle Gradient Fills -->
+                <linearGradient id="bbmp-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(0, 166, 140, 0.09)" />
+                  <stop offset="50%" stop-color="rgba(2, 132, 199, 0.05)" />
+                  <stop offset="100%" stop-color="rgba(0, 166, 140, 0.08)" />
+                </linearGradient>
+                <radialGradient id="cbd-glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(0, 166, 140, 0.22)" />
+                  <stop offset="60%" stop-color="rgba(2, 132, 199, 0.08)" />
+                  <stop offset="100%" stop-color="rgba(0, 166, 140, 0)" />
+                </radialGradient>
+              </defs>
+
+              <!-- Subtle Technical Grid -->
+              <rect width="540" height="420" fill="url(#blr-grid)" rx="16" />
+
+              <!-- Greater Bengaluru (BBMP & BDA Metropolitan) Outer Boundary Contour -->
               <path
-                d="M120 20 L220 30 L260 90 L240 160 L280 220 L270 320 L220 380 L140 370 L80 320 L90 240 L60 170 L70 90 Z"
-                fill="rgba(0, 166, 140, 0.08)" stroke="#00A68C" stroke-width="2" stroke-dasharray="4 4" />
-              <path d="M140 60 L200 70 L220 120 L210 180 L230 250 L200 330 L160 330 L120 280 L120 190 L100 130 Z"
-                fill="rgba(2, 132, 199, 0.06)" stroke="rgba(2, 132, 199, 0.35)" stroke-width="1.5" />
+                d="M 260 40 
+                   C 295 42, 335 48, 375 60 
+                   C 415 68, 465 76, 482 95 
+                   C 492 112, 480 142, 462 168 
+                   C 458 192, 452 220, 442 248 
+                   C 436 278, 430 312, 412 334 
+                   C 392 360, 358 378, 318 386 
+                   C 288 393, 268 392, 243 388 
+                   C 225 384, 205 374, 185 354 
+                   C 145 328, 108 298, 78 268 
+                   C 64 242, 68 218, 84 188 
+                   C 94 168, 114 148, 134 128 
+                   C 150 108, 175 88, 204 68 
+                   C 224 48, 244 40, 260 40 Z"
+                fill="url(#bbmp-grad)"
+                stroke="#00A68C"
+                stroke-width="2"
+                stroke-dasharray="6 4" />
+
+              <!-- Inner Core Urban Zone (CBD / Central Bengaluru) -->
+              <path
+                d="M 235 175 
+                   C 255 160, 290 162, 310 175 
+                   C 325 190, 330 215, 320 235 
+                   C 305 255, 275 260, 250 255 
+                   C 230 245, 220 225, 225 200 
+                   C 228 185, 230 180, 235 175 Z"
+                fill="url(#cbd-glow)"
+                stroke="rgba(0, 166, 140, 0.45)"
+                stroke-width="1.5" />
+
+              <!-- Bangalore Key Water Bodies (Lakes) -->
+              <!-- Bellandur & Varthur Lake System (East) -->
+              <path d="M 345 228 Q 368 222 388 226 Q 408 234 392 240 Q 368 235 345 228 Z" fill="rgba(2, 132, 199, 0.3)" stroke="rgba(2, 132, 199, 0.6)" stroke-width="1" />
+              <!-- Ulsoor Lake (Central East) -->
+              <ellipse cx="298" cy="195" rx="6" ry="8" fill="rgba(2, 132, 199, 0.3)" stroke="rgba(2, 132, 199, 0.6)" stroke-width="1" />
+              <!-- Hebbal Lake (North ORR) -->
+              <ellipse cx="265" cy="118" rx="9" ry="5" fill="rgba(2, 132, 199, 0.3)" stroke="rgba(2, 132, 199, 0.6)" stroke-width="1" />
+
+              <!-- NICE Peripheral Expressway (South-West Arc) -->
+              <path
+                d="M 135 105 
+                   C 105 160, 90 210, 95 260 
+                   C 105 305, 145 340, 195 360 
+                   C 235 372, 280 372, 330 358 
+                   C 365 345, 390 325, 410 305"
+                fill="none"
+                stroke="#F59E0B"
+                stroke-width="1.8"
+                stroke-dasharray="5 4"
+                opacity="0.75" />
+              <text x="118" y="325" font-size="7.5" fill="#D97706" font-weight="700" letter-spacing="0.4" transform="rotate(-30 118 325)">NICE EXPRESSWAY</text>
+
+              <!-- Outer Ring Road (ORR) Loop -->
+              <path
+                d="M 265 125 
+                   C 315 125, 355 142, 368 180 
+                   C 375 215, 362 245, 335 262 
+                   C 305 278, 255 278, 225 265 
+                   C 190 250, 180 220, 185 185 
+                   C 192 150, 225 125, 265 125 Z"
+                fill="none"
+                stroke="#00A68C"
+                stroke-width="2"
+                stroke-dasharray="6 4"
+                opacity="0.85" />
+              <text x="265" y="142" font-size="8.5" fill="#00A68C" font-weight="700" text-anchor="middle" letter-spacing="0.6">OUTER RING ROAD (ORR)</text>
+
+              <!-- Radial Arterial Logistics Corridors (Highways connecting Hubs) -->
+              <!-- Bellary Rd (NH 44) to Yelahanka North Hub -->
+              <line x1="265" y1="125" x2="259" y2="65" stroke="rgba(0, 166, 140, 0.45)" stroke-width="2" stroke-dasharray="3 3" />
+              <!-- Old Madras Rd (NH 75) to KR Puram Hub -->
+              <line x1="310" y1="180" x2="400" y2="176" stroke="rgba(0, 166, 140, 0.45)" stroke-width="2" stroke-dasharray="3 3" />
+              <!-- Old Madras Rd extension to Hoskote Hub -->
+              <line x1="400" y1="176" x2="443" y2="92" stroke="rgba(0, 166, 140, 0.45)" stroke-width="2" stroke-dasharray="3 3" />
+              <!-- Sarjapur Rd to Sarjapura Hub -->
+              <line x1="335" y1="262" x2="400" y2="302" stroke="rgba(0, 166, 140, 0.45)" stroke-width="2" stroke-dasharray="3 3" />
+              <!-- Kanakapura Rd (NH 209) to Kanakapura Hub -->
+              <line x1="250" y1="260" x2="243" y2="353" stroke="rgba(0, 166, 140, 0.45)" stroke-width="2" stroke-dasharray="3 3" />
+              <!-- Mysore Rd (SH 17) to Kengeri Hub -->
+              <line x1="200" y1="240" x2="97" y2="252" stroke="rgba(0, 166, 140, 0.45)" stroke-width="2" stroke-dasharray="3 3" />
+
+              <!-- Central Node: CBD / Majestic Command Hub -->
+              <circle cx="268" cy="205" r="5" fill="#00A68C" />
+              <circle cx="268" cy="205" r="9" fill="none" stroke="rgba(0, 166, 140, 0.4)" stroke-width="1.5" />
+              <text x="268" y="222" font-size="7.5" fill="var(--text-secondary)" font-weight="700" text-anchor="middle">CBD • CENTRAL</text>
+
+              <!-- Compass Rose / North Indicator -->
+              <g transform="translate(24, 24)">
+                <circle cx="12" cy="12" r="12" fill="rgba(0, 166, 140, 0.06)" stroke="rgba(0, 166, 140, 0.25)" stroke-width="1" />
+                <polygon points="12,4 15,12 12,10 9,12" fill="#00A68C" />
+                <text x="12" y="20" font-size="7" fill="#00A68C" font-weight="800" text-anchor="middle">N</text>
+              </g>
+
+              <!-- Technical Map Legend Watermark -->
+              <text x="24" y="404" font-size="8" fill="rgba(100, 116, 139, 0.55)" font-weight="600" letter-spacing="0.5">GREATER BENGALURU LOGISTICS GRID • 12.9716° N, 77.5946° E</text>
             </svg>
 
-            <!-- Pins -->
-            <div class="city-hub-pin" style="top: 22%; left: 32%;" data-city="belagavi">
+            <!-- Geographically Accurate Bangalore Operational Hub Pins -->
+            <!-- 1. Yelahanka: North Gateway (Top Center) -->
+            <div class="city-hub-pin" style="top: 15%; left: 48%;" data-city="yelahanka" title="Yelahanka North Gateway Hub">
               <div class="pin-circle"></div>
-              <div class="pin-label">Belagavi</div>
+              <div class="pin-label">Yelahanka</div>
             </div>
 
-            <div class="city-hub-pin" style="top: 36%; left: 45%;" data-city="hubballi">
+            <!-- 2. Hoskote: East / North-East Industrial Node (Upper Right) -->
+            <div class="city-hub-pin" style="top: 22%; left: 82%;" data-city="hoskote" title="Hoskote Industrial Fulfillment Hub">
               <div class="pin-circle"></div>
-              <div class="pin-label">Hubballi</div>
+              <div class="pin-label">Hoskote</div>
             </div>
 
-            <div class="city-hub-pin" style="top: 52%; left: 38%;" data-city="shivamogga">
+            <!-- 3. KR Puram: East Distribution Center (Middle Right - Active Default) -->
+            <div class="city-hub-pin active" style="top: 42%; left: 74%;" data-city="krpuram" title="KR Puram Mega Distribution Hub">
               <div class="pin-circle"></div>
-              <div class="pin-label">Shivamogga</div>
+              <div class="pin-label">KR Puram</div>
             </div>
 
-            <div class="city-hub-pin" style="top: 66%; left: 24%;" data-city="mangaluru">
+            <!-- 4. Sarjapura: South-East Tech Corridor (Lower Right) -->
+            <div class="city-hub-pin" style="top: 72%; left: 74%;" data-city="sarjapura" title="Sarjapura Tech-Belt Logistics Hub">
               <div class="pin-circle"></div>
-              <div class="pin-label">Mangaluru</div>
+              <div class="pin-label">Sarjapura</div>
             </div>
 
-            <div class="city-hub-pin" style="top: 68%; left: 62%;" data-city="tumakuru">
+            <!-- 5. Kanakapura: South Gateway (Bottom Center) -->
+            <div class="city-hub-pin" style="top: 84%; left: 45%;" data-city="kanakapura" title="Kanakapura South Gateway Hub">
               <div class="pin-circle"></div>
-              <div class="pin-label">Tumakuru</div>
+              <div class="pin-label">Kanakapura</div>
             </div>
 
-            <div class="city-hub-pin active" style="top: 76%; left: 74%;" data-city="bengaluru">
+            <!-- 6. Kengeri: West / Mysore Road Gateway (Middle Left) -->
+            <div class="city-hub-pin" style="top: 60%; left: 18%;" data-city="kengeri" title="Kengeri West Distribution Hub">
               <div class="pin-circle"></div>
-              <div class="pin-label">Bengaluru (HQ)</div>
+              <div class="pin-label">Kengeri</div>
             </div>
 
-            <div class="city-hub-pin" style="top: 86%; left: 56%;" data-city="mysuru">
-              <div class="pin-circle"></div>
-              <div class="pin-label">Mysuru</div>
-            </div>
           </div>
         </div>
 
@@ -1703,29 +1820,29 @@
           <div
             style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
             <span class="badge badge-teal" id="hub-status-badge">Operational • 24/7 Active</span>
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">Hub Code: #KA-BLR-01</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;" id="hub-code-badge">Hub Code: #BLR-E01 • East Corridor</span>
           </div>
 
-          <h3 class="hub-city-name" id="hub-city-title">Bengaluru Central Mega Hub</h3>
+          <h3 class="hub-city-name" id="hub-city-title">KR Puram Mega Distribution Hub</h3>
           <p id="hub-coverage-text" style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.5;">
-            100% Greater Bengaluru &amp; Outer Tech Corridors including Whitefield, Electronic City, Peenya, and Hebbal.
+            KR Puram, Whitefield, Mahadevapura, Hoodi, Marathahalli &amp; East ORR Corridor
           </p>
 
           <div class="hub-capacity-stats">
             <div class="capacity-stat-box">
-              <h4 id="hub-warehouse-count">6 Mega + 18 Micro</h4>
-              <p>Horeca &amp; Stores</p>
+              <h4 id="hub-warehouse-count">2 Mega + 6 Micro Stores</h4>
+              <p>Warehouses &amp; Stores</p>
             </div>
             <div class="capacity-stat-box">
-              <h4 id="hub-area-size">250,000+ sq.ft.</h4>
-              <p>Storage &amp; Conveyor Capacity</p>
+              <h4 id="hub-area-size">110,000+ sq.ft.</h4>
+              <p>Storage &amp; Staging Capacity</p>
             </div>
             <div class="capacity-stat-box">
-              <h4 id="hub-fleet-size">40+ EV Units</h4>
+              <h4 id="hub-fleet-size">52+ EV Scooters &amp; Vans</h4>
               <p>Active Electric Delivery Fleet</p>
             </div>
             <div class="capacity-stat-box">
-              <h4 id="hub-delivery-time">4-6 Hours</h4>
+              <h4 id="hub-delivery-time">2-4 Hours</h4>
               <p>Avg Turnaround Time</p>
             </div>
           </div>
@@ -1784,31 +1901,32 @@
         <div class="whatsapp-cta-left">
           <div class="whatsapp-pill-badge">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.61 14.34C16.36 14.21 15.13 13.61 14.9 13.53C14.67 13.44 14.51 13.4 14.34 13.65C14.18 13.9 13.71 14.45 13.56 14.62C13.42 14.79 13.27 14.81 13.02 14.68C12.78 14.56 11.99 14.3 11.05 13.47C10.32 12.82 9.83 12.02 9.68 11.77C9.54 11.52 9.67 11.39 9.79 11.27C9.9 11.16 10.04 10.98 10.16 10.83C10.29 10.69 10.33 10.58 10.41 10.42C10.49 10.25 10.45 10.11 10.39 9.98C10.33 9.86 9.83 8.64 9.63 8.14C9.42 7.66 9.22 7.72 9.06 7.71C8.92 7.71 8.75 7.7 8.58 7.7C8.42 7.7 8.15 7.76 7.92 8.01C7.69 8.26 7.05 8.86 7.05 10.08C7.05 11.3 7.94 12.48 8.06 12.64C8.19 12.81 9.81 15.31 12.29 16.38C12.88 16.63 13.34 16.78 13.7 16.9C14.29 17.08 14.83 17.06 15.26 16.99C15.73 16.92 16.71 16.4 16.92 15.82C17.12 15.25 17.12 14.75 17.06 14.65C17 14.55 16.85 14.47 16.61 14.34Z" />
+              <path
+                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.61 14.34C16.36 14.21 15.13 13.61 14.9 13.53C14.67 13.44 14.51 13.4 14.34 13.65C14.18 13.9 13.71 14.45 13.56 14.62C13.42 14.79 13.27 14.81 13.02 14.68C12.78 14.56 11.99 14.3 11.05 13.47C10.32 12.82 9.83 12.02 9.68 11.77C9.54 11.52 9.67 11.39 9.79 11.27C9.9 11.16 10.04 10.98 10.16 10.83C10.29 10.69 10.33 10.58 10.41 10.42C10.49 10.25 10.45 10.11 10.39 9.98C10.33 9.86 9.83 8.64 9.63 8.14C9.42 7.66 9.22 7.72 9.06 7.71C8.92 7.71 8.75 7.7 8.58 7.7C8.42 7.7 8.15 7.76 7.92 8.01C7.69 8.26 7.05 8.86 7.05 10.08C7.05 11.3 7.94 12.48 8.06 12.64C8.19 12.81 9.81 15.31 12.29 16.38C12.88 16.63 13.34 16.78 13.7 16.9C14.29 17.08 14.83 17.06 15.26 16.99C15.73 16.92 16.71 16.4 16.92 15.82C17.12 15.25 17.12 14.75 17.06 14.65C17 14.55 16.85 14.47 16.61 14.34Z" />
             </svg>
             <span>Direct WhatsApp Support &amp; Sourcing</span>
           </div>
           <h3>Prefer to Order or Inquire via WhatsApp?</h3>
           <p>
-            Connect directly with our sourcing desk for live inventory updates, wholesale FMCG rates, or rapid order placement on WhatsApp.
+            Connect directly with our sourcing desk for live inventory updates, wholesale FMCG rates, or rapid order
+            placement on WhatsApp.
           </p>
         </div>
         <div class="whatsapp-cta-right">
-          <a href="https://wa.me/919844624445?text=Hello%20SourceHub%2C%20I%20would%20like%20to%20inquire%20about%20partnering%20and%20ordering." 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="whatsapp-action-btn" 
-             id="cta-whatsapp-link">
+          <a href="https://wa.me/919844624445?text=Hello%20SourceHub%2C%20I%20would%20like%20to%20inquire%20about%20partnering%20and%20ordering."
+            target="_blank" rel="noopener noreferrer" class="whatsapp-action-btn" id="cta-whatsapp-link">
             <div class="whatsapp-icon-circle">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.61 14.34C16.36 14.21 15.13 13.61 14.9 13.53C14.67 13.44 14.51 13.4 14.34 13.65C14.18 13.9 13.71 14.45 13.56 14.62C13.42 14.79 13.27 14.81 13.02 14.68C12.78 14.56 11.99 14.3 11.05 13.47C10.32 12.82 9.83 12.02 9.68 11.77C9.54 11.52 9.67 11.39 9.79 11.27C9.9 11.16 10.04 10.98 10.16 10.83C10.29 10.69 10.33 10.58 10.41 10.42C10.49 10.25 10.45 10.11 10.39 9.98C10.33 9.86 9.83 8.64 9.63 8.14C9.42 7.66 9.22 7.72 9.06 7.71C8.92 7.71 8.75 7.7 8.58 7.7C8.42 7.7 8.15 7.76 7.92 8.01C7.69 8.26 7.05 8.86 7.05 10.08C7.05 11.3 7.94 12.48 8.06 12.64C8.19 12.81 9.81 15.31 12.29 16.38C12.88 16.63 13.34 16.78 13.7 16.9C14.29 17.08 14.83 17.06 15.26 16.99C15.73 16.92 16.71 16.4 16.92 15.82C17.12 15.25 17.12 14.75 17.06 14.65C17 14.55 16.85 14.47 16.61 14.34Z" />
+                <path
+                  d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.61 14.34C16.36 14.21 15.13 13.61 14.9 13.53C14.67 13.44 14.51 13.4 14.34 13.65C14.18 13.9 13.71 14.45 13.56 14.62C13.42 14.79 13.27 14.81 13.02 14.68C12.78 14.56 11.99 14.3 11.05 13.47C10.32 12.82 9.83 12.02 9.68 11.77C9.54 11.52 9.67 11.39 9.79 11.27C9.9 11.16 10.04 10.98 10.16 10.83C10.29 10.69 10.33 10.58 10.41 10.42C10.49 10.25 10.45 10.11 10.39 9.98C10.33 9.86 9.83 8.64 9.63 8.14C9.42 7.66 9.22 7.72 9.06 7.71C8.92 7.71 8.75 7.7 8.58 7.7C8.42 7.7 8.15 7.76 7.92 8.01C7.69 8.26 7.05 8.86 7.05 10.08C7.05 11.3 7.94 12.48 8.06 12.64C8.19 12.81 9.81 15.31 12.29 16.38C12.88 16.63 13.34 16.78 13.7 16.9C14.29 17.08 14.83 17.06 15.26 16.99C15.73 16.92 16.71 16.4 16.92 15.82C17.12 15.25 17.12 14.75 17.06 14.65C17 14.55 16.85 14.47 16.61 14.34Z" />
               </svg>
             </div>
             <div class="whatsapp-btn-info">
               <span class="whatsapp-btn-label">Chat on WhatsApp</span>
               <span class="whatsapp-btn-number">+91 98446 24445</span>
             </div>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="whatsapp-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              class="whatsapp-arrow">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
@@ -1884,7 +2002,8 @@
               onclick="alert('SourceHub 24/7 Priority Support: support@sourcehub.in | 1800-SOURCE-HUB')">Partner Support
               Desk</a>
             <a href="https://wa.me/919844624445?text=Hello%20SourceHub%2C%20I%20would%20like%20to%20inquire%20about%20partnering%20and%20ordering."
-              target="_blank" rel="noopener noreferrer" style="color: #10B981; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+              target="_blank" rel="noopener noreferrer"
+              style="color: #10B981; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
               <span>WhatsApp: +91 98446 24445</span>
             </a>
           </div>
@@ -2038,14 +2157,12 @@
   </div>
 
   <!-- Floating WhatsApp Quick Button -->
-  <a href="https://wa.me/919844624445?text=Hello%20SourceHub%2C%20I%20would%20like%20to%20inquire%20about%20partnering%20and%20ordering." 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="floating-whatsapp-btn" 
-     id="floating-whatsapp"
-     aria-label="Chat on WhatsApp with SourceHub at 98446 24445">
+  <a href="https://wa.me/919844624445?text=Hello%20SourceHub%2C%20I%20would%20like%20to%20inquire%20about%20partnering%20and%20ordering."
+    target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" id="floating-whatsapp"
+    aria-label="Chat on WhatsApp with SourceHub at 98446 24445">
     <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.61 14.34C16.36 14.21 15.13 13.61 14.9 13.53C14.67 13.44 14.51 13.4 14.34 13.65C14.18 13.9 13.71 14.45 13.56 14.62C13.42 14.79 13.27 14.81 13.02 14.68C12.78 14.56 11.99 14.3 11.05 13.47C10.32 12.82 9.83 12.02 9.68 11.77C9.54 11.52 9.67 11.39 9.79 11.27C9.9 11.16 10.04 10.98 10.16 10.83C10.29 10.69 10.33 10.58 10.41 10.42C10.49 10.25 10.45 10.11 10.39 9.98C10.33 9.86 9.83 8.64 9.63 8.14C9.42 7.66 9.22 7.72 9.06 7.71C8.92 7.71 8.75 7.7 8.58 7.7C8.42 7.7 8.15 7.76 7.92 8.01C7.69 8.26 7.05 8.86 7.05 10.08C7.05 11.3 7.94 12.48 8.06 12.64C8.19 12.81 9.81 15.31 12.29 16.38C12.88 16.63 13.34 16.78 13.7 16.9C14.29 17.08 14.83 17.06 15.26 16.99C15.73 16.92 16.71 16.4 16.92 15.82C17.12 15.25 17.12 14.75 17.06 14.65C17 14.55 16.85 14.47 16.61 14.34Z" />
+      <path
+        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.61 14.34C16.36 14.21 15.13 13.61 14.9 13.53C14.67 13.44 14.51 13.4 14.34 13.65C14.18 13.9 13.71 14.45 13.56 14.62C13.42 14.79 13.27 14.81 13.02 14.68C12.78 14.56 11.99 14.3 11.05 13.47C10.32 12.82 9.83 12.02 9.68 11.77C9.54 11.52 9.67 11.39 9.79 11.27C9.9 11.16 10.04 10.98 10.16 10.83C10.29 10.69 10.33 10.58 10.41 10.42C10.49 10.25 10.45 10.11 10.39 9.98C10.33 9.86 9.83 8.64 9.63 8.14C9.42 7.66 9.22 7.72 9.06 7.71C8.92 7.71 8.75 7.7 8.58 7.7C8.42 7.7 8.15 7.76 7.92 8.01C7.69 8.26 7.05 8.86 7.05 10.08C7.05 11.3 7.94 12.48 8.06 12.64C8.19 12.81 9.81 15.31 12.29 16.38C12.88 16.63 13.34 16.78 13.7 16.9C14.29 17.08 14.83 17.06 15.26 16.99C15.73 16.92 16.71 16.4 16.92 15.82C17.12 15.25 17.12 14.75 17.06 14.65C17 14.55 16.85 14.47 16.61 14.34Z" />
     </svg>
     <span class="floating-whatsapp-tooltip">Chat with us: +91 98446 24445</span>
   </a>
