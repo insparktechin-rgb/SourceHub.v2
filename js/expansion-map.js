@@ -8,8 +8,8 @@ const HUB_DATA = {
     code: 'Hub Code: #BLR-E01 • East Corridor',
     state: 'Bengaluru Urban (East)',
     status: 'Operational • 24/7 Active',
-    Horeca: '2 Mega + 6 Micro Stores',
-    HorecaqFt: '110,000+ sq.ft.',
+    Horeca: '2 Megastore',
+    HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '52+ EV Scooters & Vans',
     avgDeliveryTime: '2-4 Hours',
     coverage: 'KR Puram, Whitefield, Mahadevapura, Hoodi, Marathahalli & East ORR Corridor'
@@ -19,8 +19,8 @@ const HUB_DATA = {
     code: 'Hub Code: #BLR-N01 • North Corridor',
     state: 'Bengaluru Urban (North)',
     status: 'Operational • 24/7 Active',
-    Horeca: '1 Regional Depot + 5 Micro Hubs',
-    HorecaqFt: '85,000+ sq.ft.',
+    Horeca: '1 Regional Depot',
+    HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '38+ EV Units',
     avgDeliveryTime: '2-4 Hours',
     coverage: 'Yelahanka, Hebbal, Sahakarnagar, Jakkur, Vidyaranyapura & Airport Road'
@@ -31,7 +31,7 @@ const HUB_DATA = {
     state: 'Bengaluru Rural / East Node',
     status: 'Operational • Live',
     Horeca: '1 High-Capacity Fulfillment Center',
-    HorecaqFt: '145,000+ sq.ft.',
+    HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '44+ Heavy & Medium EV Cargo',
     avgDeliveryTime: '3-5 Hours',
     coverage: 'Hoskote Industrial Area, Malur Road, NH 75 Corridor & East Industrial Outskirts'
@@ -41,8 +41,8 @@ const HUB_DATA = {
     code: 'Hub Code: #BLR-SE01 • South-East Corridor',
     state: 'Bengaluru Urban (South-East)',
     status: 'Operational • Live',
-    Horeca: '1 Fulfillment Center + 4 Micro Hubs',
-    HorecaqFt: '95,000+ sq.ft.',
+    Horeca: '1 Fulfillment Center',
+    HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '40+ EV Scooters & Vans',
     avgDeliveryTime: '2-4 Hours',
     coverage: 'Sarjapur Road, Bellandur, Carmelaram, Dommasandra, Hadosiddapura & Attibele'
@@ -53,7 +53,7 @@ const HUB_DATA = {
     state: 'Bengaluru Urban (West)',
     status: 'Operational • Live',
     Horeca: '1 Regional Hub + 4 Express Hubs',
-    HorecaqFt: '75,000+ sq.ft.',
+    HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '32+ EV Cargo Units',
     avgDeliveryTime: '2.5-4 Hours',
     coverage: 'Kengeri Satellite Town, Rajarajeshwari Nagar, Mysore Road & Nayandahalli'
@@ -64,7 +64,7 @@ const HUB_DATA = {
     state: 'Bengaluru Urban (South)',
     status: 'Operational • Live',
     Horeca: '1 South Depot + 4 Dark Stores',
-    HorecaqFt: '70,000+ sq.ft.',
+    HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '30+ EV Cargo Units',
     avgDeliveryTime: '2.5-4 Hours',
     coverage: 'Kanakapura Road, JP Nagar, Banashankari, Thalaghattapura & Harohalli Corridor'
@@ -75,8 +75,8 @@ const HUB_DATA = {
     code: 'Hub Code: #BLR-E01 • East Corridor',
     state: 'Bengaluru Urban (HQ)',
     status: 'Operational • 24/7 Active',
-    Horeca: '2 Mega + 6 Micro Stores',
-    HorecaqFt: '110,000+ sq.ft.',
+    Horeca: '2 Megastore',
+    HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '52+ EV Scooters & Vans',
     avgDeliveryTime: '2-4 Hours',
     coverage: 'KR Puram, Whitefield, Mahadevapura, Hoodi, Marathahalli & East ORR Corridor'
