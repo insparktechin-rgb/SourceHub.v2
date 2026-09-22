@@ -332,14 +332,29 @@ html, body {
 
   /* Banner */
   .cta-banner-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 32px;
-    padding: 44px 32px;
+    padding: 44px 28px;
   }
 
-  .cta-banner-card p {
-    margin: 0 auto;
+  .cta-banner-content {
+    grid-template-columns: minmax(0, 1.15fr) auto minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .cta-banner-info h2 {
+    font-size: 2.15rem;
+  }
+
+  .cta-banner-qr-col {
+    gap: 16px;
+  }
+
+  .cta-qr-img {
+    width: 94px;
+    height: 94px;
+  }
+
+  .cta-action-dock {
+    padding: 22px 18px;
   }
 
   /* Footer */
@@ -1234,16 +1249,96 @@ html, body {
   }
 
   .cta-banner-card {
-    padding: 36px 20px;
+    padding: 38px 20px;
+    border-radius: 22px;
   }
 
-  .cta-banner-card h2 {
-    font-size: 1.75rem;
+  .cta-banner-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .cta-banner-info {
+    max-width: 100%;
+  }
+
+  .cta-banner-info h2 {
+    font-size: 1.85rem;
     line-height: 1.2;
+    margin-bottom: 12px;
   }
 
-  .cta-banner-card .btn {
+  .cta-banner-info p {
+    font-size: 0.98rem;
+    line-height: 1.62;
+    margin: 0 auto;
+    max-width: 480px;
+  }
+
+  .cta-banner-qr-col {
+    flex-direction: column;
+    gap: 18px;
+    margin: 0 auto;
     width: 100%;
+  }
+
+  .cta-qr-surface {
+    padding: 9px;
+  }
+
+  .cta-qr-img {
+    width: 104px;
+    height: 104px;
+  }
+
+  .cta-section-divider {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .cta-divider-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.04));
+  }
+
+  .cta-banner-action-col {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cta-action-dock {
+    max-width: 100%;
+    width: 100%;
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .cta-btn-primary {
+    padding: 14px 20px;
+    font-size: 0.98rem;
+    width: 100%;
+  }
+
+  .cta-btn-secondary {
+    padding: 12px 18px;
+    font-size: 0.92rem;
+    width: 100%;
+  }
+
+  .cta-supply-chain-flow {
+    gap: 6px;
+    margin-top: 16px;
+    padding-top: 14px;
+  }
+
+  .cta-step-text {
+    font-size: 0.64rem;
+    letter-spacing: 0.05em;
   }
 
   /* WhatsApp CTA Section Mobile */

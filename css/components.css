@@ -1922,34 +1922,475 @@
 }
 
 /* --------------------------------------------------------------------------
-   10. CONVERSION BANNER & FOOTER
+   10. CONVERSION BANNER (REFINED B2B COMMERCE CTA MOMENT)
    -------------------------------------------------------------------------- */
 .cta-banner-section {
-  padding: 70px 0;
+  padding: 80px 0;
   background-color: var(--bg-primary);
+  position: relative;
 }
 
 .cta-banner-card {
-  background: linear-gradient(135deg, #00A68C 0%, #008772 100%);
-  border-radius: var(--radius-xl);
-  padding: 56px 48px;
+  position: relative;
+  background: 
+    radial-gradient(120% 140% at 85% 15%, rgba(0, 223, 182, 0.16) 0%, transparent 60%),
+    radial-gradient(90% 120% at 10% 90%, rgba(0, 95, 80, 0.42) 0%, transparent 65%),
+    linear-gradient(135deg, #00937C 0%, #007E6A 45%, #006555 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 58px 56px;
+  overflow: hidden;
+  box-shadow: 
+    0 28px 64px -16px rgba(0, 75, 63, 0.32),
+    0 12px 28px -6px rgba(15, 23, 42, 0.14),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  color: #FFFFFF;
+  isolation: isolate;
+}
+
+/* Network Visual Backdrop */
+.cta-network-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cta-network-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Flowing Route Lines */
+.cta-route-primary {
+  animation: ctaRouteFlow 30s linear infinite;
+}
+
+.cta-route-secondary {
+  animation: ctaRouteFlowReverse 40s linear infinite;
+}
+
+.cta-route-ambient {
+  animation: ctaRouteFlow 45s linear infinite;
+}
+
+/* Pulsing Network Nodes */
+.cta-node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ctaNodePulse 5s ease-in-out infinite alternate;
+}
+
+/* Ambient Radial Glows */
+.cta-ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+  z-index: 1;
+}
+
+.cta-ambient-glow-left {
+  width: 320px;
+  height: 320px;
+  bottom: -100px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(0, 196, 159, 0.22) 0%, transparent 70%);
+}
+
+.cta-ambient-glow-right {
+  width: 380px;
+  height: 380px;
+  top: -120px;
+  right: -60px;
+  background: radial-gradient(circle, rgba(0, 223, 182, 0.20) 0%, transparent 70%);
+}
+
+/* Three-Column Horizontal Conversion Layout */
+.cta-banner-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) auto minmax(0, 1.02fr);
+  gap: 28px;
+  align-items: center;
+}
+
+/* Left Column: Typography */
+.cta-banner-info {
+  max-width: 490px;
+}
+
+.cta-banner-info h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.028em;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 14px rgba(0, 40, 32, 0.18);
+}
+
+.cta-banner-info p {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.90);
+  font-weight: 400;
+  max-width: 460px;
+  margin: 0;
+  letter-spacing: -0.005em;
+  text-shadow: 0 1px 6px rgba(0, 40, 32, 0.12);
+}
+
+/* Center Column: Dedicated QR Download Area */
+.cta-banner-qr-col {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  justify-content: center;
+}
+
+.cta-qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-qr-label {
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 4px rgba(0, 40, 32, 0.25);
+}
+
+.cta-qr-surface {
+  background: #FFFFFF;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px -4px rgba(0, 35, 28, 0.26), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+  line-height: 0;
+}
+
+.cta-qr-surface:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -4px rgba(0, 35, 28, 0.32), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cta-qr-anchor {
+  display: block;
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cta-qr-img {
+  display: block;
+  width: 106px;
+  height: 106px;
+  border-radius: 8px;
+}
+
+.cta-qr-subtext {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 8px;
+}
+
+/* Visual Separator between QR and CTA Area */
+.cta-section-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 130px;
+}
+
+.cta-divider-line {
+  width: 1px;
+  flex: 1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.30), rgba(255, 255, 255, 0.04));
+}
+
+.cta-divider-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 9999px;
+  padding: 4px 8px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+/* Right Column: CTA Dock & Supporting Visual Treatment */
+.cta-banner-action-col {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cta-action-dock {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 24px 22px;
+  box-shadow: 
+    0 16px 36px -8px rgba(0, 45, 38, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Soft Radial Light Behind CTA */
+.cta-action-halo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 180px;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.24) 0%, rgba(0, 223, 182, 0.15) 50%, transparent 75%);
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: 0;
+  animation: ctaHaloBreath 6s ease-in-out infinite;
+}
+
+/* Faint Glowing Route Line Behind CTA Dock */
+.cta-dock-route-decor {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.cta-dock-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Action Buttons Container */
+.cta-action-buttons {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+}
+
+/* Primary CTA Button */
+.cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #FFFFFF !important;
+  color: #006D5B !important;
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding: 15px 28px;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 
+    0 8px 22px rgba(0, 48, 40, 0.22),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.cta-btn-primary:hover {
+  background: #FFFFFF !important;
+  color: #005647 !important;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 14px 32px rgba(0, 48, 40, 0.30),
+    0 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+.cta-btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 14px rgba(0, 48, 40, 0.2);
+}
+
+.cta-btn-arrow {
+  display: inline-block;
+  color: inherit;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.cta-btn-primary:hover .cta-btn-arrow {
+  transform: translateX(5px);
+}
+
+/* Secondary CTA Button */
+.cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  padding: 13px 24px;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background-color 0.25s ease,
+              border-color 0.25s ease,
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.cta-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.20) !important;
+  border-color: rgba(255, 255, 255, 0.60) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 40, 32, 0.18);
+}
+
+.cta-btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Micro Supply-Chain Flow: SOURCE -> STORE -> DELIVERY -> BUSINESS */
+.cta-supply-chain-flow {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: var(--shadow-xl), 0 0 30px rgba(0, 166, 140, 0.25);
-  color: #FFFFFF;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.cta-banner-card h2 {
-  font-size: 2.2rem;
-  color: #FFFFFF;
-  margin-bottom: 10px;
+.cta-flow-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.cta-banner-card p {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 520px;
+.cta-step-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.cta-step-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.cta-flow-separator {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.cta-step-active .cta-step-dot {
+  background: #00DFB6;
+  box-shadow: 0 0 8px #00DFB6;
+  animation: ctaDotPing 2.5s ease-in-out infinite;
+}
+
+.cta-step-active .cta-step-text {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* Keyframes */
+@keyframes ctaRouteFlow {
+  from { stroke-dashoffset: 240; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes ctaRouteFlowReverse {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 240; }
+}
+
+@keyframes ctaNodePulse {
+  0% { transform: scale(0.92); opacity: 0.35; }
+  50% { transform: scale(1.18); opacity: 0.75; }
+  100% { transform: scale(0.92); opacity: 0.35; }
+}
+
+@keyframes ctaHaloBreath {
+  0%, 100% { opacity: 0.55; transform: translate(-50%, -50%) scale(0.96); }
+  50% { opacity: 0.85; transform: translate(-50%, -50%) scale(1.05); }
+}
+
+@keyframes ctaDotPing {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.35); opacity: 1; }
+}
+
+/* Accessibility / Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .cta-route-primary,
+  .cta-route-secondary,
+  .cta-route-ambient,
+  .cta-node-pulse,
+  .cta-action-halo,
+  .cta-step-active .cta-step-dot {
+    animation: none !important;
+  }
 }
 
 .footer {

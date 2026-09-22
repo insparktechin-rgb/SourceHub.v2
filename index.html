@@ -1874,24 +1874,173 @@
 
     <div class="container">
       <div class="cta-banner-card interactive-card-3d">
-        <div>
-          <h2>Everything Your Store Needs. <br>Delivered Smarter.</h2>
-          <p>Join over 12,000+ forward-thinking retailers and kiranas boosting their profit margins with SourceHub's
-            dynamic SPO pricing and 100% EV logistics.</p>
+        <!-- Abstract Supply Network Visual Mesh (Low-Contrast Logistics Geometry) -->
+        <div class="cta-network-backdrop" aria-hidden="true">
+          <svg class="cta-network-svg" viewBox="0 0 1200 440" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ctaRouteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00DFB6" stop-opacity="0.32" />
+                <stop offset="45%" stop-color="#00C49F" stop-opacity="0.24" />
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.38" />
+              </linearGradient>
+              <linearGradient id="ctaGridGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.08" />
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.015" />
+              </linearGradient>
+              <radialGradient id="ctaNodeGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#00DFB6" stop-opacity="0.55" />
+                <stop offset="100%" stop-color="#00DFB6" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+
+            <!-- Subtle Grid Lines (Logistics Matrix Coordinates) -->
+            <path d="M0 70 H1200 M0 160 H1200 M0 270 H1200 M0 370 H1200" stroke="url(#ctaGridGrad)" stroke-width="1" stroke-dasharray="3 7" />
+            <path d="M180 0 V440 M420 0 V440 M700 0 V440 M960 0 V440" stroke="url(#ctaGridGrad)" stroke-width="1" stroke-dasharray="3 7" />
+
+            <!-- Supply Network Routes: SOURCE -> STORE -> DELIVERY -> BUSINESS -->
+            <path class="cta-route-line cta-route-primary"
+              d="M 60 260 C 180 260, 240 140, 390 140 C 520 140, 580 290, 720 270 C 850 250, 920 180, 1140 180"
+              stroke="url(#ctaRouteGrad)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="8 6" />
+
+            <path class="cta-route-line cta-route-secondary"
+              d="M 120 340 C 260 340, 340 220, 510 220 C 650 220, 720 320, 890 290 C 1000 270, 1080 210, 1180 220"
+              stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" stroke-dasharray="5 7" />
+
+            <path class="cta-route-line cta-route-ambient"
+              d="M 40 110 C 220 110, 360 170, 580 160 C 760 150, 860 110, 1120 120"
+              stroke="rgba(0, 223, 182, 0.15)" stroke-width="1.2" stroke-dasharray="4 8" />
+
+            <!-- Connected Ecosystem Nodes -->
+            <!-- 1. SOURCE (Origin Hub) -->
+            <g class="cta-node-group" transform="translate(160, 260)">
+              <circle cx="0" cy="0" r="16" fill="url(#ctaNodeGlow)" class="cta-node-pulse" />
+              <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="8.5" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" />
+            </g>
+
+            <!-- 2. STORE (Fulfillment Depot Geometry) -->
+            <g class="cta-node-group" transform="translate(390, 140)">
+              <rect x="-7" y="-7" width="14" height="14" rx="2.5" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" transform="rotate(45)" />
+              <circle cx="0" cy="0" r="3.5" fill="#00DFB6" />
+              <circle cx="0" cy="0" r="16" fill="url(#ctaNodeGlow)" class="cta-node-pulse" style="animation-delay: 1.6s;" />
+            </g>
+
+            <!-- 3. DELIVERY (Fleet Junction) -->
+            <g class="cta-node-group" transform="translate(720, 270)">
+              <circle cx="0" cy="0" r="14" fill="url(#ctaNodeGlow)" class="cta-node-pulse" style="animation-delay: 3.2s;" />
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="8" stroke="rgba(255,255,255,0.45)" stroke-width="1" stroke-dasharray="2 2" />
+            </g>
+
+            <!-- 4. BUSINESS (Retail Destination) -->
+            <g class="cta-node-group" transform="translate(920, 180)">
+              <polygon points="0,-6 6,5 -6,5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" />
+              <circle cx="0" cy="0" r="3" fill="#00DFB6" />
+              <circle cx="0" cy="0" r="15" fill="url(#ctaNodeGlow)" class="cta-node-pulse" style="animation-delay: 2.4s;" />
+            </g>
+
+            <!-- Micro Tech Geometry Accents -->
+            <g opacity="0.22">
+              <circle cx="860" cy="330" r="2.5" fill="#FFFFFF" />
+              <circle cx="1040" cy="270" r="2.5" fill="#00DFB6" />
+              <path d="M850 330 L870 330" stroke="#FFFFFF" stroke-width="1" />
+              <path d="M860 320 L860 340" stroke="#FFFFFF" stroke-width="1" />
+            </g>
+          </svg>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 14px;">
-          <button class="btn btn-secondary btn-lg" data-modal-target="partner-modal" id="banner-btn-partner"
-            style="background: #FFFFFF; color: var(--brand-teal-dark); border: none;">
-            <span>Register as Retail Partner</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
-          <button class="btn btn-secondary" data-modal-target="app-download-modal" id="banner-btn-app"
-            style="background: rgba(255,255,255,0.15); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4);">
-            <span>Download on Android &amp; iOS</span>
-          </button>
+
+        <!-- Ambient Depth Glows -->
+        <div class="cta-ambient-glow cta-ambient-glow-left" aria-hidden="true"></div>
+        <div class="cta-ambient-glow cta-ambient-glow-right" aria-hidden="true"></div>
+
+        <!-- Three-Column Horizontal Conversion Composition -->
+        <div class="cta-banner-content">
+          <!-- LEFT: Headline + Supporting Copy -->
+          <div class="cta-banner-info">
+            <h2>Everything Your Store Needs. <br>Delivered Smarter.</h2>
+            <p>Join over 12,000 forward-thinking retailers and kiranas boosting their profit margins with SourceHub's
+              dynamic SPO pricing and 100% EV logistics.</p>
+          </div>
+
+          <!-- CENTER: Dedicated QR Code Download Area -->
+          <div class="cta-banner-qr-col">
+            <div class="cta-qr-box">
+              <span class="cta-qr-label">Scan the QR</span>
+              <div class="cta-qr-surface">
+                <a href="https://play.google.com/store/apps/details?id=com.arobit.sourceHub.customer&amp;pcampaignid=web_share"
+                  target="_blank" rel="noopener noreferrer" class="cta-qr-anchor" title="Scan or click to download the SourceHub Retailer App on Google Play">
+                  <img src="assets/images/qr-sourcehub-app.svg" alt="Scan to download SourceHub Retailer App" width="108" height="108" class="cta-qr-img">
+                </a>
+              </div>
+              <span class="cta-qr-subtext">Retailer App</span>
+            </div>
+
+            <!-- Visual Separator with 'OR' Badge -->
+            <div class="cta-section-divider" aria-hidden="true">
+              <span class="cta-divider-line"></span>
+              <span class="cta-divider-badge">OR</span>
+              <span class="cta-divider-line"></span>
+            </div>
+          </div>
+
+          <!-- RIGHT: Elevated Glass Action Card -->
+          <div class="cta-banner-action-col">
+            <div class="cta-action-dock">
+              <!-- Soft radial halo behind CTA -->
+              <div class="cta-action-halo" aria-hidden="true"></div>
+
+              <!-- Very faint glowing route line behind CTA -->
+              <div class="cta-dock-route-decor" aria-hidden="true">
+                <svg viewBox="0 0 340 60" fill="none" class="cta-dock-svg">
+                  <path d="M 10 30 Q 90 8, 170 30 T 330 30" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.5" stroke-dasharray="4 6" />
+                  <circle cx="10" cy="30" r="3" fill="#00DFB6" />
+                  <circle cx="170" cy="30" r="2.5" fill="#FFFFFF" opacity="0.6" />
+                  <circle cx="330" cy="30" r="3" fill="#00DFB6" />
+                </svg>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="cta-action-buttons">
+                <button class="btn cta-btn-primary" data-modal-target="partner-modal" id="banner-btn-partner">
+                  <span>Register as Retail Partner</span>
+                  <svg class="cta-btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <a href="https://play.google.com/store/apps/details?id=com.arobit.sourceHub.customer&amp;pcampaignid=web_share"
+                  target="_blank" rel="noopener noreferrer" class="btn cta-btn-secondary" id="banner-btn-app">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="cta-btn-icon" aria-hidden="true">
+                    <path d="M3.609 1.814L13.793 12 3.61 22.186a1.996 1.996 0 0 1-.61-1.446V3.26c0-.55.225-1.05.61-1.446zM15.207 13.414l2.586 2.586-13.414 7.74c-.2.115-.427.18-.66.18l11.488-10.506zm0-2.828L3.72.08A1.97 1.97 0 0 1 4.38.26l13.414 7.74-2.586 2.586zm1.414 1.414l3.774 2.18c.957.553.957 1.455 0 2.008l-3.774 2.18-2.12-2.12 2.12-2.248z" />
+                  </svg>
+                  <span>Download on Android &amp; iOS</span>
+                </a>
+              </div>
+
+              <!-- Micro Network Flow Indicator: SOURCE → STORE → DELIVERY → BUSINESS -->
+              <div class="cta-supply-chain-flow" aria-hidden="true">
+                <span class="cta-flow-step">
+                  <span class="cta-step-dot"></span>
+                  <span class="cta-step-text">Source</span>
+                </span>
+                <span class="cta-flow-separator">→</span>
+                <span class="cta-flow-step">
+                  <span class="cta-step-dot"></span>
+                  <span class="cta-step-text">Store</span>
+                </span>
+                <span class="cta-flow-separator">→</span>
+                <span class="cta-flow-step">
+                  <span class="cta-step-dot"></span>
+                  <span class="cta-step-text">Delivery</span>
+                </span>
+                <span class="cta-flow-separator">→</span>
+                <span class="cta-flow-step cta-step-active">
+                  <span class="cta-step-dot"></span>
+                  <span class="cta-step-text">Business</span>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
