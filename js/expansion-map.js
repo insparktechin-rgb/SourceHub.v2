@@ -10,8 +10,8 @@ const HUB_DATA = {
     status: 'Operational • 24/7 Active',
     Horeca: '2 Megastore',
     HorecaqFt: '15-20 thousand sq.ft.',
-    evFleet: '52+ EV Scooters & Vans',
-    avgDeliveryTime: '2-4 Hours',
+    evFleet: '40+ EV Scooters & Vans',
+    avgDeliveryTime: '4-6 Hours',
     coverage: 'KR Puram, Whitefield, Mahadevapura, Hoodi, Marathahalli & East ORR Corridor'
   },
   yelahanka: {
@@ -21,8 +21,8 @@ const HUB_DATA = {
     status: 'Operational • 24/7 Active',
     Horeca: '1 Regional Depot',
     HorecaqFt: '15-20 thousand sq.ft.',
-    evFleet: '38+ EV Units',
-    avgDeliveryTime: '2-4 Hours',
+    evFleet: '40+ EV Units',
+    avgDeliveryTime: '4-6 Hours',
     coverage: 'Yelahanka, Hebbal, Sahakarnagar, Jakkur, Vidyaranyapura & Airport Road'
   },
   hoskote: {
@@ -33,7 +33,7 @@ const HUB_DATA = {
     Horeca: '1 High-Capacity Fulfillment Center',
     HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '44+ Heavy & Medium EV Cargo',
-    avgDeliveryTime: '3-5 Hours',
+    avgDeliveryTime: '4-6 Hours',
     coverage: 'Hoskote Industrial Area, Malur Road, NH 75 Corridor & East Industrial Outskirts'
   },
   sarjapura: {
@@ -44,7 +44,7 @@ const HUB_DATA = {
     Horeca: '1 Fulfillment Center',
     HorecaqFt: '15-20 thousand sq.ft.',
     evFleet: '40+ EV Scooters & Vans',
-    avgDeliveryTime: '2-4 Hours',
+    avgDeliveryTime: '4-6 Hours',
     coverage: 'Sarjapur Road, Bellandur, Carmelaram, Dommasandra, Hadosiddapura & Attibele'
   },
   kengeri: {
@@ -54,8 +54,8 @@ const HUB_DATA = {
     status: 'Operational • Live',
     Horeca: '1 Regional Hub + 4 Express Hubs',
     HorecaqFt: '15-20 thousand sq.ft.',
-    evFleet: '32+ EV Cargo Units',
-    avgDeliveryTime: '2.5-4 Hours',
+    evFleet: '40+ EV Cargo Units',
+    avgDeliveryTime: '4-6 Hours',
     coverage: 'Kengeri Satellite Town, Rajarajeshwari Nagar, Mysore Road & Nayandahalli'
   },
   kanakapura: {
@@ -65,8 +65,8 @@ const HUB_DATA = {
     status: 'Operational • Live',
     Horeca: '1 South Depot + 4 Dark Stores',
     HorecaqFt: '15-20 thousand sq.ft.',
-    evFleet: '30+ EV Cargo Units',
-    avgDeliveryTime: '2.5-4 Hours',
+    evFleet: '40+ EV Cargo Units',
+    avgDeliveryTime: '4-6 Hours',
     coverage: 'Kanakapura Road, JP Nagar, Banashankari, Thalaghattapura & Harohalli Corridor'
   },
   // Fallbacks for legacy keys
@@ -77,8 +77,8 @@ const HUB_DATA = {
     status: 'Operational • 24/7 Active',
     Horeca: '2 Megastore',
     HorecaqFt: '15-20 thousand sq.ft.',
-    evFleet: '52+ EV Scooters & Vans',
-    avgDeliveryTime: '2-4 Hours',
+    evFleet: '40+ EV Scooters & Vans',
+    avgDeliveryTime: '4-6 Hours',
     coverage: 'KR Puram, Whitefield, Mahadevapura, Hoodi, Marathahalli & East ORR Corridor'
   }
 };
